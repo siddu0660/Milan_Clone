@@ -1,0 +1,258 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-color: #1b1a16;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.Head {
+  background-color: dimgray;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  border-style: dashed;
+}
+
+.title {
+  width: 160%;
+}
+
+.Context {
+  width: 97%;
+  padding: 20px;
+  color: #fff;
+  font-size: large;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  word-wrap: break-word;
+}
+
+.Context-text {
+  width: 650px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.Images {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.im {
+  border-width: 2px;
+  max-height: 250px;
+  width: auto;
+  transition: transform 300ms ease-in;
+}
+
+.im:hover {
+  transform: scale(1.1);
+}
+
+.registerbutton {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.registerbutton:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.registerbutton:active {
+  color: #000;
+}
+
+.registerbutton:active:after {
+  background: transparent;
+}
+
+.registerbutton:hover:before {
+  opacity: 1;
+}
+
+.registerbutton:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.hoverimg {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.hoverimg:hover {
+  transform: scale(1.2);
+}
+
+.Register {
+  max-width: -fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 550px;
+  height: 500px;
+  padding: 20px;
+  background-color: #fffff0;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  border-radius: 30px;
+  justify-self: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.Register:hover {
+  box-shadow: 40px 40px 25px rgba(193, 93, 93, 0.3);
+}
+
+.profile {
+  max-width: -fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#email,
+#fullname,
+#phoneNumber {
+  width: auto;
+  font-size: 1em;
+  padding: 0 30px;
+  border-radius: 10px;
+  border: 2px solid #0b1111;
+  background: transparent;
+  transition: 0.1s ease;
+  text-align: center;
+  align-items: center;
+  z-index: 1111;
+}
+
+#email:focus,
+#fullname:focus,
+#phoneNumber:focus,
+#email:valid,
+#fullname:valid,
+#phoneNumber:valid {
+  border: 4px solid #ff7300;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Mandatory {
+  white-space: nowrap;
+  animation: infiniteScroll 10s linear infinite;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(33%);
+  }
+  100% {
+    transform: translateX(-33%);
+  }
+}
+
+.RegisterText {
+  animation: chooskomalla 2s linear infinite;
+}
+
+@keyframes chooskomalla {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.profile {
+  width: 97%;
+  justify-content: center;
+  max-height: 23px;
+  display: flex;
+}
+
+#myprofButton,
+#registeragnbutton,
+#googleSignInButton {
+  transition: transform 0.6s ease;
+}
+
+.RegisterText {
+  margin: 0;
+  translate: -5%;
+}
