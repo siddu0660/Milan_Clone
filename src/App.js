@@ -4,6 +4,7 @@ import HEADERR from "./components/Header";
 function App() {
   return (
     <div>
+      <HEADERR />
     </div>
   );
 }
